@@ -1,4 +1,4 @@
-# Copyright 1999-2019 Gentoo Authors
+# Copyright 1999-2020 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=7
@@ -12,7 +12,7 @@ SRC_URI="http://nixos.org/releases/${PN}/${P}/${P}.tar.xz"
 LICENSE="LGPL-2.1"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="+etc-profile +gc doc s3 +sodium"
+IUSE="+etc-profile +gc doc s3 +sodium libressl"
 
 # sys-apps/busybox is needed for sandbox mount of /bin/sh
 RDEPEND="
@@ -22,7 +22,6 @@ RDEPEND="
 	sys-apps/busybox[static]
 	dev-db/sqlite
 	dev-libs/editline:0=
-	dev-libs/openssl:0=
 	>=dev-libs/boost-1.66:0=[context]
 	net-misc/curl
 	sys-libs/libseccomp
@@ -34,6 +33,8 @@ RDEPEND="
 	)
 	s3? ( dev-libs/aws-sdk-cpp )
 	sodium? ( dev-libs/libsodium:0= )
+	!libressl? ( dev-libs/openssl:0= )
+	libressl? ( dev-libs/libressl:0= )
 "
 DEPEND="${RDEPEND}
 	>=sys-devel/bison-2.6
