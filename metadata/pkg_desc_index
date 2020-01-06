@@ -1,2 +1,2 @@
 sys-apps/guix 1.0.1-r1: GNU package manager (nix sibling)
-sys-apps/nix 2.3.1 2.3.1-r1: A purely functional package manager
+sys-apps/nix 2.3.1-r1 2.3.2: A purely functional package manager
