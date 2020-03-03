@@ -110,23 +110,26 @@ src_install() {
 
 	readme.gentoo_create_doc
 
-	# here we use an eager variant of something that
-	# is lazily done by nix-daemon and root nix-env
-
 	# TODO: will need a tweak for prefix
+
+	# Follow the steps of 'scripts/install-multi-user.sh:create_directories()'
+	local dir dirs=(
+		/nix
+		/nix/var
+		/nix/var/log
+		/nix/var/log/nix
+		/nix/var/log/nix/drvs
+		/nix/var/nix{,/db,/gcroots,/profiles,/temproots,/userpool}
+		/nix/var/nix/{gcroots,profiles}/per-user
+	)
+	for dir in "${dirs[@]}"; do
+		keepdir "${dir}"
+		fperms 0755 "${dir}"
+	done
+
 	keepdir             /nix/store
 	fowners root:nixbld /nix/store
 	fperms 1775         /nix/store
-
-	keepdir             /nix/var/nix/channel-cache
-	fperms 0777         /nix/var/nix/channel-cache
-
-	keepdir             /nix/var/nix/profiles/per-user
-	fperms 1777         /nix/var/nix/profiles/per-user
-
-	# setup directories nix-daemon: /etc/profile.d/nix-daemon.sh
-	keepdir             /nix/var/nix/gcroots/per-user
-	fperms 1777         /nix/var/nix/gcroots/per-user
 
 	newinitd "${FILESDIR}"/nix-daemon.initd nix-daemon
 
