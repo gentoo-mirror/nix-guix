@@ -44,6 +44,7 @@ DEPEND="${RDEPEND}
 PATCHES=(
 	"${FILESDIR}"/${PN}-2.3-libpaths.patch
 	"${FILESDIR}"/${PN}-2.3-bootstrap.patch
+	"${FILESDIR}"/${PN}-2.3-gc-crash.patch
 )
 
 DISABLE_AUTOFORMATTING=yes
