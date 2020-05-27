@@ -1,4 +1,4 @@
 dev-scheme/guile-ssh 0.11.3: SSH module for Guile
 sys-apps/busybox-nix-sandbox-shell 1.31.1 1.31.1-r1: static busybox for sys-apps/nix sandbox needs
 sys-apps/guix 1.0.1-r1 1.0.1-r2 1.1.0: GNU package manager (nix sibling)
-sys-apps/nix 2.3.3-r2 2.3.4: A purely functional package manager
+sys-apps/nix 2.3.4 2.3.5: A purely functional package manager
