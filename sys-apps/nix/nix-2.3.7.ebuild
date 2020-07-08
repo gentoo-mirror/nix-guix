@@ -40,6 +40,7 @@ DEPEND="${RDEPEND}
 	>=sys-devel/bison-2.6
 	>=sys-devel/flex-2.5.35
 "
+
 # https://github.com/trofi/nix-guix-gentoo/issues/8
 # Account for missing upstream m4 files from tarball:
 # dev-util/pkgconfig: m4/pkg.m4
