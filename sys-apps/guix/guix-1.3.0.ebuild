@@ -57,9 +57,11 @@ RDEPEND="
 	dev-scheme/bytestructures
 	dev-scheme/guile-gcrypt
 	>=dev-scheme/guile-git-0.2.0
-	dev-scheme/guile-json
+	>=dev-scheme/guile-json-4.3
+	dev-scheme/guile-lzlib
 	dev-scheme/guile-sqlite3
 	dev-scheme/guile-ssh
+	>=dev-scheme/guile-zlib-0.1.0-r1
 	net-libs/gnutls[guile]
 	sys-libs/zlib
 	app-arch/bzip2
@@ -80,7 +82,7 @@ DOC_CONTENTS="Quick start user guide on Gentoo:
 
 [as root] allow binary substitution to be downloaded (optional)
 	# guix archive --authorize < /usr/share/guix/ci.guix.info.pub
-[as root] enable and start guix-daemon service:
+[as root] enable guix-daemon service:
 	[systemd] # systemctl enable guix-daemon && systemctl start guix-daemon
 	[openrc]  # rc-update add guix-daemon && /etc/init.d/guix-daemon start
 [as a user] ln -sf /var/guix/profiles/per-user/\$USER/guix-profile \$HOME/.guix-profile
