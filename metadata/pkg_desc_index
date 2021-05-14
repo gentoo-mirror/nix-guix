@@ -1,6 +1,6 @@
 dev-scheme/guile-lzlib 0.0.2: zilb module for Guile
-dev-scheme/guile-ssh 0.11.3: SSH module for Guile
-dev-scheme/guile-zlib 0.0.1: zilb module for Guile
+dev-scheme/guile-ssh 0.11.3 0.13.1: SSH module for Guile
+dev-scheme/guile-zlib 0.0.1 0.1.0: zilb module for Guile
 sys-apps/busybox-nix-sandbox-shell 1.31.1-r2: static busybox for sys-apps/nix sandbox needs
-sys-apps/guix 1.1.0 1.2.0: GNU package manager (nix sibling)
+sys-apps/guix 1.2.0 1.3.0: GNU package manager (nix sibling)
 sys-apps/nix 2.3.10: A purely functional package manager
