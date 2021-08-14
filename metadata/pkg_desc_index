@@ -1,4 +1,4 @@
-dev-scheme/guile-lib 0.2.7: collection of various modules
+dev-scheme/guile-lib 0.2.7-r1: collection of various modules
 dev-scheme/guile-lzlib 0.0.2: zilb module for Guile
 dev-scheme/guile-ssh 0.11.3 0.13.1: SSH module for Guile
 dev-scheme/guile-zlib 0.0.1 0.1.0: zilb module for Guile

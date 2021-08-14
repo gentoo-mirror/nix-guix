@@ -1,4 +1,4 @@
-DEFINED_PHASES=-
+DEFINED_PHASES=configure
 DEPEND=>=dev-scheme/guile-2.0.0:=
 DESCRIPTION=collection of various modules
 EAPI=8
@@ -8,4 +8,4 @@ LICENSE=GPL-3+
 RDEPEND=>=dev-scheme/guile-2.0.0:=
 SLOT=0
 SRC_URI=http://download.savannah.nongnu.org/releases/guile-lib/guile-lib-0.2.7.tar.gz
-_md5_=c1e8968fc3d1e0c1f925dbf2819c3db9
+_md5_=fb20641454dfa9df239af2fb360a6948
