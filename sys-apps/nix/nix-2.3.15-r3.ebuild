@@ -31,7 +31,7 @@ RDEPEND="
 		dev-libs/libxslt
 		app-text/docbook-xsl-stylesheets
 	)
-	s3? ( dev-libs/aws-sdk-cpp )
+	s3? ( dev-libs/aws-sdk-cpp[s3] )
 	sodium? ( dev-libs/libsodium:0= )
 	dev-libs/openssl:0=
 "
@@ -86,7 +86,7 @@ pkg_pretend() {
 
 pkg_setup() {
 	enewgroup nixbld
-	for i in {1..10}; do
+	for i in {1..64}; do
 		# we list 'nixbld' twice to
 		# both assign a primary group for user
 		# and add a user to /etc/group
@@ -101,10 +101,11 @@ src_prepare() {
 }
 
 src_configure() {
-	if ! use s3; then
-		# Disable automagic depend: bug #670256
-		export ac_cv_header_aws_s3_S3Client_h=no
-	fi
+	# Disable automagic depend:
+	# - don't enable implicitly: bug #670256
+	# - don't disable implicitly: https://github.com/trofi/nix-guix-gentoo/issues/12
+	export ac_cv_header_aws_s3_S3Client_h=$(usex s3)
+
 	econf \
 		--localstatedir="${EPREFIX}"/nix/var \
 		$(use_enable gc) \

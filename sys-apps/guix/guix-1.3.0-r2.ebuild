@@ -58,6 +58,7 @@ RDEPEND="
 	dev-scheme/guile-gcrypt
 	>=dev-scheme/guile-git-0.2.0
 	>=dev-scheme/guile-json-4.3
+	dev-scheme/guile-lib
 	dev-scheme/guile-lzlib
 	dev-scheme/guile-sqlite3
 	dev-scheme/guile-ssh
@@ -105,7 +106,7 @@ pkg_pretend() {
 
 pkg_setup() {
 	enewgroup guixbuild
-	for i in {1..10}; do
+	for i in {1..64}; do
 		# we list 'guixbuild' twice to
 		# both assign a primary group for user
 		# and add a user to /etc/group

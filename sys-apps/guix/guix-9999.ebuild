@@ -106,7 +106,7 @@ pkg_pretend() {
 
 pkg_setup() {
 	enewgroup guixbuild
-	for i in {1..10}; do
+	for i in {1..64}; do
 		# we list 'guixbuild' twice to
 		# both assign a primary group for user
 		# and add a user to /etc/group
