@@ -8,6 +8,6 @@ KEYWORDS=~amd64 ~x86
 LICENSE=ISC
 RDEPEND=app-crypt/libmd virtual/libcrypt:=
 SLOT=0
-SRC_URI=https://github.com/kristapsdz/lowdown/archive/refs/tags/VERSION_0_8_4.tar.gz -> lowdown-0.8.4.tar.gz
+SRC_URI=https://github.com/kristapsdz/lowdown/archive/refs/tags/VERSION_0_10_0.tar.gz -> lowdown-0.10.0.tar.gz
 _eclasses_=toolchain-funcs	badd6e329e1f3e6bee99b35bf8763ce8	multilib	4b66d835ec72e021e359bb81eacfe988
-_md5_=fb7d26b2731c2bafb92ea6618be03917
+_md5_=e5fb403422da119fedd803e82ee6cb59

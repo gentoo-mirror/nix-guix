@@ -1,5 +1,5 @@
-app-text/lowdown 0.8.4-r1 0.8.4-r2: Markdown translator producing HTML5, roff documents in the ms and man formats
-app-text/mdbook 0.4.12: Creates a book from markdown files
+app-text/lowdown 0.8.4-r1 0.10.0: Markdown translator producing HTML5, roff documents in the ms and man formats
+app-text/mdbook 0.4.12 0.4.14: Creates a book from markdown files
 dev-libs/aws-sdk-cpp 1.8.160 1.8.160-r1: AWS SDK for C++
 dev-libs/libcpuid 0.5.1: CPU identification library for the x86
 dev-scheme/guile-lib 0.2.7-r1: collection of various modules
