@@ -1,18 +1,17 @@
-# Copyright 1999-2021 Gentoo Authors
+# Copyright 1999-2022 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=7
 
-inherit autotools flag-o-matic git-r3 linux-info readme.gentoo-r1 user
+inherit autotools flag-o-matic linux-info readme.gentoo-r1 user
 
 DESCRIPTION="A purely functional package manager"
 HOMEPAGE="https://nixos.org/nix"
 
-#SRC_URI="http://nixos.org/releases/${PN}/${P}/${P}.tar.xz"
-EGIT_REPO_URI="https://github.com/NixOS/nix.git"
+SRC_URI="https://github.com/NixOS/nix/archive/refs/tags/${PV}.tar.gz -> ${P}.tar.gz"
 LICENSE="LGPL-2.1"
 SLOT="0"
-#KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~x86"
 IUSE="+etc-profile +gc doc s3 +sodium"
 
 # sys-apps/busybox-nix-sandbox-shell is needed for sandbox mount of /bin/sh
@@ -155,6 +154,11 @@ src_install() {
 		rm "${ED}"/etc/profile.d/nix.sh || die
 		rm "${ED}"/etc/profile.d/nix-daemon.sh || die
 	fi
+
+	# Remove bundled nlohmann_json to avoid file collisions
+	# Fixed in upcoming release.
+	rm ${D}/usr/include/nlohmann/json.hpp || die
+	rm ${D}/usr/include/nlohmann/json_fwd.hpp || die
 }
 
 pkg_postinst() {
