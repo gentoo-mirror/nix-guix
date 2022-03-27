@@ -1,5 +1,5 @@
 DEFINED_PHASES=compile configure install test
-DEPEND=>=sys-kernel/linux-headers-2.6.39
+DEPEND=>=sys-kernel/linux-headers-2.6.39 virtual/libcrypt[static-libs]
 DESCRIPTION=static busybox for sys-apps/nix sandbox needs
 EAPI=8
 HOMEPAGE=https://www.busybox.net/
@@ -7,6 +7,6 @@ INHERIT=flag-o-matic toolchain-funcs
 KEYWORDS=~amd64 ~x86
 LICENSE=GPL-2
 SLOT=0
-SRC_URI=https://www.busybox.net/downloads/busybox-1.33.1.tar.bz2
+SRC_URI=https://www.busybox.net/downloads/busybox-1.35.0.tar.bz2
 _eclasses_=toolchain-funcs	badd6e329e1f3e6bee99b35bf8763ce8	multilib	4a33c9008e5ee30cb8840a3fdc24df2b	flag-o-matic	a500d7cc40da3de38c361e889153bdf7
-_md5_=35599ce7ae4531c38a6e6c637ababe6a
+_md5_=b815e7f8c67d8a00f18d6e42a555c765
