@@ -16,7 +16,8 @@ SLOT="0"
 IUSE=""
 #RESTRICT="test"
 
-DEPEND=">=sys-kernel/linux-headers-2.6.39"
+DEPEND=">=sys-kernel/linux-headers-2.6.39
+	virtual/libcrypt[static-libs]"
 RDEPEND=""
 
 S=${WORKDIR}/${MY_P}
