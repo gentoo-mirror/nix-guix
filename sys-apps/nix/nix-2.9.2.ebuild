@@ -56,8 +56,8 @@ DEPEND+="
 
 PATCHES=(
 	"${FILESDIR}"/${PN}-2.6-libpaths.patch
-	"${FILESDIR}"/${PN}-2.7-inplace-nix.patch
-	"${FILESDIR}"/${PN}-2.7-lowdown.patch
+	"${FILESDIR}"/${PN}-2.9-inplace-nix.patch
+	"${FILESDIR}"/${PN}-2.9-lowdown.patch
 )
 
 DISABLE_AUTOFORMATTING=yes
@@ -168,8 +168,10 @@ src_install() {
 
 	if ! use etc-profile; then
 		rm "${ED}"/etc/profile.d/nix.sh || die
-		rm "${ED}"/etc/profile.d/nix-daemon.sh || die
 	fi
+	# nix-daemon.sh should not be used for users' profile.
+	# Only for daemon itself.
+	rm "${ED}"/etc/profile.d/nix-daemon.sh || die
 }
 
 pkg_postinst() {
