@@ -3,10 +3,10 @@ DEPEND=>=sys-kernel/linux-headers-2.6.39 virtual/libcrypt[static-libs]
 DESCRIPTION=static busybox for sys-apps/nix sandbox needs
 EAPI=8
 HOMEPAGE=https://www.busybox.net/
-INHERIT=flag-o-matic toolchain-funcs
+INHERIT=toolchain-funcs
 KEYWORDS=~amd64 ~x86
 LICENSE=GPL-2
 SLOT=0
 SRC_URI=https://www.busybox.net/downloads/busybox-1.35.0.tar.bz2
-_eclasses_=toolchain-funcs	e9da88162e7a3c60376e80c2c2adcdfb	multilib	4fbbbc98f236f1b43acd99476bc3cd85	flag-o-matic	a3abd6002fafb3022597be6b8d01f88b
-_md5_=b815e7f8c67d8a00f18d6e42a555c765
+_eclasses_=toolchain-funcs	e9da88162e7a3c60376e80c2c2adcdfb	multilib	4fbbbc98f236f1b43acd99476bc3cd85
+_md5_=e202b422c8f9caf7819ce4488284fd70
