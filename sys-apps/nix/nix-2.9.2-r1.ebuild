@@ -3,7 +3,7 @@
 
 EAPI=7
 
-inherit autotools flag-o-matic linux-info readme.gentoo-r1 user toolchain-funcs
+inherit autotools linux-info readme.gentoo-r1 toolchain-funcs
 
 DESCRIPTION="A purely functional package manager"
 HOMEPAGE="https://nixos.org/nix"
@@ -36,9 +36,18 @@ RDEPEND="
 		dev-libs/libxslt
 		app-text/docbook-xsl-stylesheets
 	)
-	s3? ( dev-libs/aws-sdk-cpp[-custom-memory-management,s3] )
+	s3? ( dev-libs/aws-sdk-cpp[-custom-memory-management(+),s3] )
 	sodium? ( dev-libs/libsodium:0= )
 "
+# add users and groups
+RDEPEND+="
+	acct-group/nixbld
+"
+for i in {1..64}; do
+	RDEPEND+="
+		acct-user/nixbld${i}
+	"
+done
 DEPEND="${RDEPEND}
 	app-text/mdbook
 	dev-cpp/nlohmann_json
@@ -86,16 +95,6 @@ pkg_pretend() {
 	#     https://nixos.wiki/wiki/Nix#Sandboxing
 	local CONFIG_CHECK="~USER_NS"
 	check_extra_config
-}
-
-pkg_setup() {
-	enewgroup nixbld
-	for i in {1..64}; do
-		# we list 'nixbld' twice to
-		# both assign a primary group for user
-		# and add a user to /etc/group
-		enewuser nixbld${i} -1 -1 /var/empty nixbld,nixbld
-	done
 }
 
 src_prepare() {

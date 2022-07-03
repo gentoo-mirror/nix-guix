@@ -3,7 +3,7 @@
 
 EAPI=7
 
-inherit autotools linux-info readme.gentoo-r1 systemd user
+inherit autotools linux-info readme.gentoo-r1 systemd
 
 DESCRIPTION="GNU package manager (nix sibling)"
 HOMEPAGE="https://www.gnu.org/software/guix/"
@@ -69,9 +69,17 @@ RDEPEND="
 	app-arch/bzip2
 	dev-db/sqlite
 "
-
-DEPEND="${RDEPEND}
+# add users and groups
+RDEPEND+="
+	acct-group/guixbuild
 "
+for i in {1..64}; do
+	RDEPEND+="
+		acct-user/guixbuilder${i}
+	"
+done
+
+DEPEND="${RDEPEND}"
 
 PATCHES=(
 	"${FILESDIR}"/${PN}-0.16.0-default-daemon.patch
@@ -108,18 +116,6 @@ pkg_pretend() {
 	# and for 'guix environment --container'.
 	local CONFIG_CHECK="~USER_NS"
 	check_extra_config
-}
-
-pkg_setup() {
-	enewgroup guixbuild
-	for i in {1..64}; do
-		# we list 'guixbuild' twice to
-		# both assign a primary group for user
-		# and add a user to /etc/group
-		# 'kvm' is used to make 'guix system vm <system.scm>'
-		# work by default: bug #699642
-		enewuser guixbuilder${i} -1 -1 /var/empty guixbuild,guixbuild,kvm
-	done
 }
 
 src_prepare() {
