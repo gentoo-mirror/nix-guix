@@ -3,7 +3,7 @@
 
 EAPI=8
 
-inherit autotools linux-info readme.gentoo-r1 toolchain-funcs
+inherit autotools linux-info readme.gentoo-r1 tmpfiles toolchain-funcs
 
 DESCRIPTION="A purely functional package manager"
 HOMEPAGE="https://nixos.org/nix"
@@ -64,9 +64,9 @@ DEPEND+="
 "
 
 PATCHES=(
-	"${FILESDIR}"/${PN}-2.10-libpaths.patch
-	"${FILESDIR}"/${PN}-2.9-inplace-nix.patch
 	"${FILESDIR}"/${PN}-2.9-lowdown.patch
+	"${FILESDIR}"/${PN}-2.10-libpaths.patch
+	"${FILESDIR}"/${PN}-2.11-DESTDIR.patch
 )
 
 DISABLE_AUTOFORMATTING=yes
@@ -179,4 +179,5 @@ pkg_postinst() {
 	fi
 
 	readme.gentoo_print_elog
+	tmpfiles_process nix-daemon.conf
 }
