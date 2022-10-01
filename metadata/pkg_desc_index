@@ -130,6 +130,7 @@ acct-user/nixbld8 1: Builder user for nix-daemon from sys-apps/nix
 acct-user/nixbld9 1: Builder user for nix-daemon from sys-apps/nix
 app-text/lowdown-nix 1.0.0-r1: Markdown translator producing HTML5, roff documents in the ms and man formats
 dev-libs/aws-sdk-cpp 1.8.160-r3: AWS SDK for C++
+dev-libs/libcpuid 0.5.1-r1: CPU identification library for the x86
 dev-scheme/guile-lib 0.2.7-r1: collection of various modules
 dev-scheme/guile-lzlib 0.0.2: zilb module for Guile
 dev-scheme/guile-ssh 0.15.1: SSH module for Guile
