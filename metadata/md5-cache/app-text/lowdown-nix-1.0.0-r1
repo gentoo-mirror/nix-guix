@@ -10,5 +10,5 @@ RDEPEND=app-crypt/libmd:= virtual/libcrypt:=
 RESTRICT=strip
 SLOT=0
 SRC_URI=https://github.com/kristapsdz/lowdown/archive/refs/tags/VERSION_1_0_0.tar.gz -> lowdown-1.0.0.tar.gz
-_eclasses_=toolchain-funcs	1542e649be915f43f6908a9e93909961	multilib	5ca4e49abed8e3a2f7b56920eadee157
+_eclasses_=toolchain-funcs	441f754fd75cd4fd1fa06fbc17da6144	multilib	5ca4e49abed8e3a2f7b56920eadee157
 _md5_=011f7e0fd8c7daba9e231e407d478bfa
