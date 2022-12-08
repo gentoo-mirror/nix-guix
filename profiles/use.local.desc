@@ -4,5 +4,4 @@
 
 sys-apps/nix:etc-profile - Install /etc/profile.d/ entry to inject nix support for all users.
 sys-apps/nix:gc - Enable garbage collection in the Nix expression evaluator (use dev-libs/boehm-gc).
-sys-apps/nix:s3 - Enable Amazon S3 bucket to load and store packages (use dev-libs/aws-sdk-cpp).
 sys-apps/nix:sodium - Use dev-libs/libsodium for cryptography
