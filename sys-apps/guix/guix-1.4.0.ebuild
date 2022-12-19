@@ -41,9 +41,8 @@ copy_boot_guile_binaries() {
 	done
 }
 
-SRC_URI="https://alpha.gnu.org/gnu/guix/${P/_rc/rc}.tar.gz
+SRC_URI="mirror://gnu/${PN}/${P}.tar.gz
 	$(binary_src_uris)"
-S=${WORKDIR}/${P/_rc/rc}
 
 LICENSE="GPL-3"
 SLOT="0"
