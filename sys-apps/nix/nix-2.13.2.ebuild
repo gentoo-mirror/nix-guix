@@ -49,6 +49,7 @@ for i in {1..64}; do
 done
 DEPEND="${RDEPEND}
 	app-text/mdbook
+	app-text/mdbook-linkcheck
 	dev-cpp/nlohmann_json
 	>=sys-devel/bison-2.6
 	>=sys-devel/flex-2.5.35
@@ -64,7 +65,7 @@ DEPEND+="
 
 PATCHES=(
 	"${FILESDIR}"/${PN}-2.10-libpaths.patch
-	"${FILESDIR}"/${PN}-2.12-DESTDIR.patch
+	"${FILESDIR}"/${PN}-2.13-DESTDIR.patch
 )
 
 DISABLE_AUTOFORMATTING=yes
