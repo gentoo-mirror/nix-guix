@@ -1,12 +1,13 @@
-DEFINED_PHASES=compile configure install test
-DEPEND=>=sys-kernel/linux-headers-2.6.39 virtual/libcrypt[static-libs]
+DEFINED_PHASES=compile configure install prepare test
+DEPEND=>=sys-kernel/linux-headers-2.6.39 virtual/libcrypt[static-libs] llvm-libunwind? ( sys-libs/llvm-libunwind[static-libs] )
 DESCRIPTION=static busybox for sys-apps/nix sandbox needs
 EAPI=8
 HOMEPAGE=https://www.busybox.net/
-INHERIT=toolchain-funcs
+INHERIT=edo toolchain-funcs
+IUSE=llvm-libunwind
 KEYWORDS=~amd64 ~x86
 LICENSE=GPL-2
 SLOT=0
 SRC_URI=https://www.busybox.net/downloads/busybox-1.35.0.tar.bz2
-_eclasses_=toolchain-funcs	9a610728b9bcca1919234cceb35a1027	multilib	5ca4e49abed8e3a2f7b56920eadee157
-_md5_=33bbc016ba1377fe256339b16d78f465
+_eclasses_=edo	c0eb9cbe6b0bd01fcb4918f12598a4d3	toolchain-funcs	9a610728b9bcca1919234cceb35a1027	multilib	5ca4e49abed8e3a2f7b56920eadee157
+_md5_=1ace8d9a0d1e69aa09a520499da1639f
