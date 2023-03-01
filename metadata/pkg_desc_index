@@ -133,4 +133,4 @@ app-text/mdbook-linkcheck 0.7.7: A backend for 'mdbook' which will check your li
 dev-scheme/guile-zstd 0.1.1-r2: zstd module for Guile
 sys-apps/busybox-nix-sandbox-shell 1.35.0-r1: static busybox for sys-apps/nix sandbox needs
 sys-apps/guix 1.4.0-r1 9999: GNU package manager (nix sibling)
-sys-apps/nix 2.13.2 2.13.3: A purely functional package manager
+sys-apps/nix 2.13.2 2.13.3 2.14.0: A purely functional package manager
