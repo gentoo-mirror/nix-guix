@@ -1,5 +1,5 @@
 DEFINED_PHASES=compile configure install prepare test
-DEPEND=>=sys-kernel/linux-headers-2.6.39 elibc_glibc? ( sys-libs/glibc[static-libs(+)] ) virtual/libcrypt[static-libs]
+DEPEND=>=sys-kernel/linux-headers-2.6.39 virtual/libcrypt[static-libs]
 DESCRIPTION=static busybox for sys-apps/nix sandbox needs
 EAPI=8
 HOMEPAGE=https://www.busybox.net/
@@ -10,4 +10,4 @@ LICENSE=GPL-2
 SLOT=0
 SRC_URI=https://www.busybox.net/downloads/busybox-1.36.0.tar.bz2
 _eclasses_=edo	c0eb9cbe6b0bd01fcb4918f12598a4d3	toolchain-funcs	6001248ef162a5fa2a21ce132a212f6b	multilib	5ca4e49abed8e3a2f7b56920eadee157
-_md5_=02a76cc5cd28aad7dabfeda5994b2cdb
+_md5_=22e82235147890dbe6f63f9d996be7ce
