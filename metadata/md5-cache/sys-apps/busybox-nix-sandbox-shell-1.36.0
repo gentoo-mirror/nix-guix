@@ -10,4 +10,4 @@ LICENSE=GPL-2
 SLOT=0
 SRC_URI=https://www.busybox.net/downloads/busybox-1.36.0.tar.bz2
 _eclasses_=edo	c0eb9cbe6b0bd01fcb4918f12598a4d3	toolchain-funcs	6001248ef162a5fa2a21ce132a212f6b	multilib	5ca4e49abed8e3a2f7b56920eadee157
-_md5_=22e82235147890dbe6f63f9d996be7ce
+_md5_=94b68f5fdc01a6ddedb4c59bed4078e4
