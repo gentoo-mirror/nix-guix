@@ -18,7 +18,6 @@ SLOT="0"
 IUSE="llvm-libunwind"
 
 DEPEND=">=sys-kernel/linux-headers-2.6.39
-	elibc_glibc? ( sys-libs/glibc[static-libs(+)] )
 	virtual/libcrypt[static-libs]"
 RDEPEND=""
 
