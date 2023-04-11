@@ -130,6 +130,7 @@ acct-user/nixbld8 1: Builder user for nix-daemon from sys-apps/nix
 acct-user/nixbld9 1: Builder user for nix-daemon from sys-apps/nix
 app-text/lowdown-nix 1.0.0-r1: Markdown translator producing HTML5, roff documents in the ms and man formats
 app-text/mdbook-linkcheck 0.7.7: A backend for 'mdbook' which will check your links for you.
+dev-cpp/rapidcheck 0_pre20230113: Property based testing framework inspired by QuickCheck
 sys-apps/busybox-nix-sandbox-shell 1.35.0-r1 1.36.0: static busybox for sys-apps/nix sandbox needs
 sys-apps/guix 1.4.0-r2 9999: GNU package manager (nix sibling)
-sys-apps/nix 2.13.2 2.13.3 2.14.0 2.14.1: A purely functional package manager
+sys-apps/nix 2.14.1 2.15.0: A purely functional package manager
